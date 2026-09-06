@@ -26,7 +26,7 @@ Each attempt has an eight-second stable-frame timeout. The app targets standard 
 
 ## Open in Android Studio
 
-1. Install a current Android Studio with JDK 17 and Android SDK 37.
+1. Install a current Android Studio with JDK 17 and Android SDK 36.
 2. Open this folder and let Gradle sync.
 3. Connect an Android 6.0+ USB-host phone. The first target device is a Galaxy S21 Ultra on Android 15.
 4. Run the `app` debug configuration.

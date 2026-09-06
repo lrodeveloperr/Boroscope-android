@@ -27,7 +27,9 @@ class MediaRepository(private val context: Context) {
     fun list(): List<SavedMedia> {
         return runCatching {
             discardStalePartialVideos()
-            (photoDirectory().listFiles().orEmpty() + videoDirectory().listFiles().orEmpty())
+            val photos: List<File> = photoDirectory().listFiles()?.toList().orEmpty()
+            val videos: List<File> = videoDirectory().listFiles()?.toList().orEmpty()
+            photos + videos
         }.getOrDefault(emptyList())
         .distinctBy { it.absolutePath }
         .filter {

@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.worksbien.borescopedirect"
-    compileSdk = 37
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.worksbien.borescopedirect"
@@ -37,7 +37,7 @@ android {
 }
 
 dependencies {
-    val composeBom = platform("androidx.compose:compose-bom:2026.08.00")
+    val composeBom = platform("androidx.compose:compose-bom:2026.06.01")
     implementation(project(":gooduse-shell"))
     implementation(composeBom)
     implementation("androidx.activity:activity-compose:1.13.0")
@@ -53,6 +53,7 @@ dependencies {
     implementation("com.android.billingclient:billing-ktx:9.1.0")
     implementation("com.google.android.play:review:2.0.2")
     implementation("com.github.ernestp.AndroidUSBCamera:libausbc:3.6.0")
+    implementation("com.github.ernestp.AndroidUSBCamera:libuvc:3.6.0")
     debugImplementation("androidx.compose.ui:ui-tooling")
 
     testImplementation("junit:junit:4.13.2")
