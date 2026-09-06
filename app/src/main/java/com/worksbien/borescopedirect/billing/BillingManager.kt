@@ -234,14 +234,15 @@ class BillingManager(context: Context) {
         if (_state.value.unlocked || _state.value.purchaseInProgress || _state.value.restoreInProgress) return
         val details = productDetails
         val offer = details?.oneTimePurchaseOfferDetailsList?.firstOrNull()
-        if (details == null || offer == null) {
+        val offerToken = offer?.offerToken
+        if (details == null || offerToken.isNullOrBlank()) {
             _state.value = _state.value.copy(message = text(R.string.billing_details_not_ready), messageIsError = true)
             refresh()
             return
         }
         val detailParams = BillingFlowParams.ProductDetailsParams.newBuilder()
             .setProductDetails(details)
-            .setOfferToken(offer.offerToken)
+            .setOfferToken(offerToken)
             .build()
         val params = BillingFlowParams.newBuilder()
             .setProductDetailsParamsList(listOf(detailParams))
