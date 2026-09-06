@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.worksbien.borescopedirect"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.worksbien.borescopedirect"
