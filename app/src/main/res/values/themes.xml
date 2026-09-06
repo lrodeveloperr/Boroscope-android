@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.BorescopeDirect" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:colorAccent">#00D5B5</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">#071012</item>
+        <item name="android:statusBarColor">#071012</item>
+    </style>
+</resources>
