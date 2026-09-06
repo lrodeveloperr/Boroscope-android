@@ -171,7 +171,7 @@ class UvcCameraController(
             height: Int,
             format: IPreviewDataCallBack.DataFormat,
         ) {
-            if (firstFrameSeen || data.isNullOrEmpty()) return
+            if (firstFrameSeen || data == null || data.isEmpty()) return
             if (!stabilityProbe.offer(width, height, SystemClock.elapsedRealtime(), format.name)) return
             if (!passPosted.compareAndSet(false, true)) return
             val generation = cameraGeneration
