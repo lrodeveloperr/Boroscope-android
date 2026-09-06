@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "studio.gooduse.shell"
-    compileSdk = 37
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 23
@@ -23,7 +23,7 @@ android {
 }
 
 dependencies {
-    val composeBom = platform("androidx.compose:compose-bom:2026.08.00")
+    val composeBom = platform("androidx.compose:compose-bom:2026.06.01")
     implementation(composeBom)
     implementation("androidx.compose.foundation:foundation")
     implementation("androidx.compose.material3:material3")
